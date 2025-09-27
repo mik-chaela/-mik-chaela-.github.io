@@ -49,8 +49,9 @@ const Home = () => (
           textShadow: '1px 1px 2px rgba(0,0,0,0.8)'
         }}
       >
-        Lorem ipsum dolor sit amet. Est nulla beatae eum voluptas impedit quo 
-        consequatur nulla ut numquam adipisci
+        Fun fact about me is that I used to be a member of USC Dance Troupe, which taught 
+        me discipline, teamwork, and appreciation for tradition — values I now bring into my journey of 
+        building tech projects and learning step by step.
       </motion.p>
       
       {/* Button */}
@@ -77,8 +78,7 @@ const Home = () => (
       animate="show" 
       exit="hidden"
       transition={{duration: 1, ease: 'easeInOut'}}
-      className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%] xl:flex xl:flex-1 xl:justify-start xl:items-center z-50"
-    >
+      className='w-full h-full max-w-[737px] max-h-[678px] absolute right-20 -bottom-32 lg:bottom-0 lg:right-40 z-50'>
       <Avatar />
     </motion.div>
   </div>

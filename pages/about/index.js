@@ -6,16 +6,22 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
-  FaFigma,
+  FaNodeJs,
+  FaDatabase,
+  FaGithub,
+  FaShieldAlt, 
+  FaServer,    
 } from "react-icons/fa";
 
 import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiExpress,
+  SiMysql,
 } from "react-icons/si";
+
+import { 
+  MdSecurity,
+  MdApi,      
+} from "react-icons/md";
 
 
 //  data
@@ -24,20 +30,47 @@ const aboutData = [
     title: 'skills',
     info: [
       {
-        title: 'Web Development',
+        title: 'Backend Development',
+        icons: [
+          <FaNodeJs />,
+          <SiExpress />,
+        ],
+      },
+      {
+        title: 'Database Management',
+        icons: [
+          <SiMysql />,
+          <FaDatabase />,
+        ],
+      },
+      {
+        title: 'Frontend Development',
         icons: [
           <FaHtml5 />,
           <FaCss3 />,
           <FaJs />,
           <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
         ],
       },
       {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        title: 'API Testing & Tools',
+        icons: [
+          <MdApi />,
+          <FaServer />,
+        ],
+      },
+      {
+        title: 'Authentication & Security',
+        icons: [
+          <FaShieldAlt />,
+          <MdSecurity />,
+        ],
+      },
+      {
+        title: 'Version Control',
+        icons: [
+          <FaGithub />,
+        ],
       },
     ],
   },
@@ -45,12 +78,8 @@ const aboutData = [
     title: 'awards',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
+        title: ' ',
+        stage: ' ',
       },
     ],
   },
@@ -58,33 +87,25 @@ const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
-      },
-      {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
-      },
-      {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Senior Member - USC Dance Troupe',
+        stage: '2022 - 2025',
       },
     ],
   },
   {
-    title: 'credentials',
+    title: 'certifications',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'CCNA: Introduction to Networks',
+        stage: 'May 2023',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'Creative Web Design - Call Center Academy',
+        stage: 'Dec 2023',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'CCNA: Switching, Routing, and Wireless Essentials',
+        stage: 'Dec 2023',
       },
     ],
   },
@@ -111,7 +132,7 @@ const About = () => {
         initial = 'hidden'
         animate='show'
         exit = 'hidden'
-        className='hidden xl:flex absolute bottom-0 -left-[370px]'
+        className='xl:flex absolute bottom-0 -left-[370px]'
       >
         <Avatar />
       </motion.div>
@@ -132,9 +153,12 @@ const About = () => {
             initial = 'hidden'
             animate='show'
             exit = 'hidden'
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
+            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-justify'
           >
-            lorem ipsum dolor... story kineme
+            Innovation Sprouts From Quiet Sparks speaks to how I work and grow. Many of my best ideas 
+            don’t arrive loudly — they start as small curiosities or quiet thoughts during my day. Over time, 
+            I nurture these sparks through learning, experimenting, and building until they turn into projects
+            I’m proud to share.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -149,27 +173,17 @@ const About = () => {
               <div className='relative flex-1 after:w-[1px] after:h-full
               after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                <CountUp start={0} end={10} duration={5}/> +
+                <CountUp start={0} end={4} duration={5}/> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4]
                 max-w-[100px]'>Years of Experience</div>
-              </div>
-
-              {/* Clients */}
-              <div className='relative flex-1 after:w-[1px] after:h-full
-              after:bg-white/10 after:absolute after:top-0 after:right-0'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                <CountUp start={0} end={250} duration={5}/> +
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4]
-                max-w-[100px]'>Satisfied Clients</div>
               </div>
 
               {/* Projects */}
               <div className='relative flex-1 after:w-[1px] after:h-full
               after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                <CountUp start={0} end={650} duration={5}/> +
+                <CountUp start={0} end={5} duration={5}/> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4]
                 max-w-[100px]'>Finished Projects</div>
@@ -178,10 +192,10 @@ const About = () => {
               {/* Awards */}
               <div className='relative flex-1 '>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                <CountUp start={0} end={8} duration={5}/> +
+                <CountUp start={0} end={5} duration={5}/> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4]
-                max-w-[100px]'>Winning Awards</div>
+                max-w-[100px]'>Workshops Attended</div>
               </div>
             </div>
           </motion.div>
