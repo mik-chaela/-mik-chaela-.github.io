@@ -30,7 +30,9 @@ const Services = () => {
               animate='show'
               exit='hidden'
               className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-justify">
-                Lorem ipsum dolor jusmiyo kakapoy na yawa
+                Welcome to My Projects! Here you’ll find a collection of the work I’ve done as a student 
+                and beginner developer. Each project reflects my hands-on approach to learning, experimenting with 
+                new technologies, and turning ideas into real, working solutions. 
             </motion.p>
           </div>
           <motion.div 

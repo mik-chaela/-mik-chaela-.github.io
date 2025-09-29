@@ -1,4 +1,4 @@
-import ProjectsBtn from '../components/ProjectsBtn';
+import ProjectsBtn from '../components/CVBtn';
 import Avatar from '../components/Avatar';
 import ParticlesContainer from '../components/ParticlesContainer';
 
@@ -78,7 +78,7 @@ const Home = () => (
       animate="show" 
       exit="hidden"
       transition={{duration: 1, ease: 'easeInOut'}}
-      className='w-full h-full max-w-[737px] max-h-[678px] absolute right-20 -bottom-32 lg:bottom-0 lg:right-40 z-50'>
+      className='w-full h-full max-w-[737px] max-h-[678px] absolute right-20 -bottom-32 lg:bottom-0 lg:right-40 z-20'>
       <Avatar />
     </motion.div>
   </div>
