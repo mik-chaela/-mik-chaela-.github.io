@@ -5,7 +5,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 // icons
-import { BsArrowRight} from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs';
 
 import { Pagination } from 'swiper';
 import Image from 'next/image';
@@ -27,6 +27,11 @@ const workSlides = {
           title: 'title',
           path: '/proj3.jpg',
         },
+        {
+          title: 'title',
+          path: '/proj4.jpg',
+          link: 'https://usc-dt.vercel.app/',
+        },
       ],
     },
   ],
@@ -42,27 +47,37 @@ const WorkSlider = () => {
       modules={[Pagination]}
       className='h-[280px] sm:h-[480px]'
       style={{
-            paddingBottom: '40px',
-            '--swiper-pagination-color': '#ef4444',
-            '--swiper-pagination-bullet-inactive-color': 'rgba(255, 255, 255, 0.4)',
-            '--swiper-pagination-bullet-size': '8px',
-            '--swiper-pagination-bullet-horizontal-gap': '4px'
-          }}
+        paddingBottom: '40px',
+        '--swiper-pagination-color': '#ef4444',
+        '--swiper-pagination-bullet-inactive-color': 'rgba(255, 255, 255, 0.4)',
+        '--swiper-pagination-bullet-size': '8px',
+        '--swiper-pagination-bullet-horizontal-gap': '4px'
+      }}
     >
-    
+
       {workSlides.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className='grid grid-cols-2 grid-eows-2 gap-4 cursor-pointer'>
+            <div className='grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer'>
               {slide.images.map((image, index) => {
+                const Wrapper = image.link ? 'a' : 'div';
+                const props = image.link
+                  ? {
+                    href: image.link,
+                    target: '_blank',
+                    rel: 'noopener noreferrer',
+                  }
+                  : {};
+
                 return (
-                  <div 
+                  <Wrapper
                     className='relative rounded-lg overflow-hidden flex items-center justify-center group'
                     key={index}
+                    {...props}
                   >
                     <div className='flex items-center justify-center relative overflow-hidden group'>
                       {/* Image */}
-                      <Image 
+                      <Image
                         src={image.path}
                         width={500}
                         height={300}
@@ -90,7 +105,7 @@ const WorkSlider = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Wrapper>
                 );
               })}
             </div>
@@ -98,7 +113,7 @@ const WorkSlider = () => {
         );
       })}
 
-    </Swiper>
+    </Swiper >
   );
 };
 
