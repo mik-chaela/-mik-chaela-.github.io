@@ -54,7 +54,6 @@ const WorkSlider = () => {
         '--swiper-pagination-bullet-horizontal-gap': '4px'
       }}
     >
-
       {workSlides.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
@@ -112,8 +111,7 @@ const WorkSlider = () => {
           </SwiperSlide>
         );
       })}
-
-    </Swiper >
+    </Swiper>
   );
 };
 
