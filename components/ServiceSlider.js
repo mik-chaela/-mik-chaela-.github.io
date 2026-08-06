@@ -12,20 +12,30 @@ import {
   RxReader,
   RxRocket,
   RxArrowTopRight,
+  RxLockClosed,
 } from "react-icons/rx";
+
+import {
+  FaServer,
+  FaDatabase,
+  FaNetworkWired,
+  FaShieldAlt,
+  FaUserShield,
+  FaCodeBranch,
+} from "react-icons/fa";
+
+import {
+  SiFigma,
+  SiCisco,
+} from "react-icons/si";
 
 import { FreeMode, Pagination } from 'swiper';
 // data
 const serviceData = [
   {
-    icon: <RxCrop />,
+    icon: <FaServer />,
     title: 'Node.js + Express',
     description: 'Developing scalable backends and APIs using Node.js and Express for fast and reliable server-side logic.',
-  },
-  {
-    icon: <RxPencil2 />,
-    title: 'MySQL',
-    description: 'Designing and managing structured databases to store, organize, and retrieve data securely and efficiently.',
   },
   {
     icon: <RxDesktop />,
@@ -33,29 +43,49 @@ const serviceData = [
     description: 'Creating clean, responsive, and user-friendly interfaces that work seamlessly across devices.',
   },
   {
-    icon: <RxReader />,
+    icon: <FaDatabase />,
+    title: 'PostgreSQL & MySQL',
+    description: 'Designing and managing structured databases to store, organize, and retrieve data securely and efficiently.',
+  },
+  {
+    icon: <SiCisco />,
+    title: 'CCNA Networking',
+    description: 'Core knowledge of switching, routing, and wireless configurations',
+  },
+  {
+    icon: <FaUserShield />,
+    title: 'Cybersecurity',
+    description: 'Basic knowledge of security monitoring, threat detection, and incident response.',
+  },
+  {
+    icon: <FaShieldAlt />,
     title: 'Authentication and Security',
     description: 'Implementing JWT and role-based access control to protect routes and manage user sessions securely.',
   },
   {
-    icon: <RxRocket />,
+    icon: <FaCodeBranch />,
     title: 'Version Control',
-    description: 'Managing code versions, collaborating on projects, and tracking changes to maintain clean development workflows.',
+    description: 'Managing code versions and collaborating on projects to maintain clean development workflows.',
+  },
+  {
+    icon: <SiFigma />,
+    title: 'Figma',
+    description: 'Able to design and prototype user interfaces with a focus on clean, functional layouts.',
   },
 ];
 
 const ServiceSlider = () => {
   return <Swiper breakpoints={{
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
 
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 15,
-      },
-    }}
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+  }}
     freeMode={true}
     pagination={{
       clickable: true,
@@ -63,18 +93,18 @@ const ServiceSlider = () => {
     modules={[FreeMode, Pagination]}
     className='h-[280px] sm:h-[380px]'
     style={{
-          paddingBottom: '40px',
-          '--swiper-pagination-color': '#ef4444',
-          '--swiper-pagination-bullet-inactive-color': 'rgba(255, 255, 255, 0.4)',
-          '--swiper-pagination-bullet-size': '8px',
-          '--swiper-pagination-bullet-horizontal-gap': '4px'
-        }}
+      paddingBottom: '40px',
+      '--swiper-pagination-color': '#ef4444',
+      '--swiper-pagination-bullet-inactive-color': 'rgba(255, 255, 255, 0.4)',
+      '--swiper-pagination-bullet-size': '8px',
+      '--swiper-pagination-bullet-horizontal-gap': '4px'
+    }}
   >
-  
+
     {serviceData.map((item, index) => {
       return (
         <SwiperSlide key={index}>
-          <div className='bg-[rgba(239,68,68,0.15)] h-full min-h-[250px] sm:min-h-[320px] rounded-lg px-6 py-8 flex 
+          <div className='relative bg-[rgba(239,68,68,0.15)] h-full min-h-[250px] sm:min-h-[320px] rounded-lg px-6 py-6 sm:py-8 flex 
           sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer 
           hover:bg-[rgba(239,68,68,0.25)] transition-all duration-300'>
             {/* icon */}
@@ -86,10 +116,10 @@ const ServiceSlider = () => {
               <p className='max-w-[350px] leading-relaxed text-sm sm:text-base'>{item.description}</p>
             </div>
 
-            {/* arrow */}
-            <div className='text-3xl mt-auto'>
+            {/* arrow - fixed absolute position */}
+            <div className='text-3xl absolute bottom-6 left-6 sm:bottom-8 sm:left-6'>
               <RxArrowTopRight className='group-hover:rotate-45 group-hover:text-accent
-              transition-all duration-300'/> 
+              transition-all duration-300'/>
             </div>
           </div>
         </SwiperSlide>

@@ -16,21 +16,24 @@ const workSlides = {
     {
       images: [
         {
-          title: 'title',
+          title: 'Wander Wheels',
           path: '/proj1.jpg',
+          link: 'https://github.com/mik-chaela/Car-Rental-Project.git',
         },
         {
-          title: 'title',
+          title: 'CopTrax',
           path: '/proj2.jpg',
+          link: 'https://github.com/reginebuenafe/CopTrax.git',
         },
         {
-          title: 'title',
+          title: 'Hotel Management System',
           path: '/proj3.jpg',
         },
         {
-          title: 'title',
+          title: 'USC DT Webpage',
           path: '/proj4.jpg',
           link: 'https://usc-dt.vercel.app/',
+          isLive: true,
         },
       ],
     },
@@ -92,11 +95,11 @@ const WorkSlider = () => {
                       group-hover:xl:-translate-y-20 transition-all duration-300'>
                         <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
                           {/* title part 1 */}
-                          <div className='delay-100'>LIVE</div>
+                          <div className='delay-100'>{image.isLive ? 'LIVE' : 'GITHUB'}</div>
 
                           {/* title part 2 */}
                           <div className='translate-y-[500%] group-hover:translate-y-0
-                          transition-all duration-300 delay-150'>PROJECT</div>
+                          transition-all duration-300 delay-150'>{image.isLive ? 'PROJECT' : 'REPO'}</div>
 
                           {/* icon */}
                           <div className='text-xl translate-y-[500%] group-hover:translate-y-0 transition-all

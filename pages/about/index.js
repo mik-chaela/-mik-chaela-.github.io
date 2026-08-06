@@ -11,11 +11,14 @@ import {
   FaGithub,
   FaShieldAlt,
   FaServer,
+  FaUserShield,
 } from "react-icons/fa";
 
 import {
   SiExpress,
   SiMysql,
+  SiFigma,
+  SiCisco,
 } from "react-icons/si";
 
 import {
@@ -67,19 +70,29 @@ const aboutData = [
         ],
       },
       {
+        title: 'Cisco Networking',
+        icons: [
+          <SiCisco key="cisco" />,
+        ],
+      },
+      {
+        title: 'Cyber Security',
+        icons: [
+          <FaShieldAlt key="shield-cyber" />,
+          <FaUserShield key="usershield" />,
+        ],
+      },
+      {
         title: 'Version Control',
         icons: [
           <FaGithub key="github" />,
         ],
       },
-    ],
-  },
-  {
-    title: 'awards',
-    info: [
       {
-        title: ' ',
-        stage: ' ',
+        title: 'Figma Prototyping',
+        icons: [
+          <SiFigma key="figma" />
+        ],
       },
     ],
   },
@@ -89,6 +102,10 @@ const aboutData = [
       {
         title: 'Senior Member - USC Dance Troupe',
         stage: '2022 - 2025',
+      },
+      {
+        title: 'Tech, AI & Career Readiness Program-Vietnam Immersion',
+        stage: 'May 2026',
       },
     ],
   },
@@ -106,6 +123,10 @@ const aboutData = [
       {
         title: 'CCNA: Switching, Routing, and Wireless Essentials',
         stage: 'Dec 2023',
+      },
+      {
+        title: 'CyberOps Associates',
+        stage: 'Jun 2025',
       },
     ],
   },
