@@ -23,7 +23,8 @@ const workSlides = {
         {
           title: 'CopTrax',
           path: '/proj2.jpg',
-          link: 'https://github.com/reginebuenafe/CopTrax.git',
+          link: 'https://coptrax.onrender.com/',
+          isLive: true,
         },
         {
           title: 'Hotel Management System',

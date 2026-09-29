@@ -19,6 +19,7 @@ import {
   SiMysql,
   SiFigma,
   SiCisco,
+  SiAsana,
 } from "react-icons/si";
 
 import {
@@ -94,6 +95,14 @@ const aboutData = [
           <SiFigma key="figma" />
         ],
       },
+      {
+        title: 'Automations',
+        icons: [
+          <span key="n8n" role="img" aria-label="n8n" className="text-sm font-bold tracking-tight">n8n</span>,
+          <SiAsana key="asana" aria-label="Asana" />,
+          <span key="ghl" role="img" aria-label="GoHighLevel" className="text-sm font-bold tracking-tight">GHL</span>,
+        ],
+      },
     ],
   },
   {
@@ -104,8 +113,12 @@ const aboutData = [
         stage: '2022 - 2025',
       },
       {
-        title: 'Tech, AI & Career Readiness Program-Vietnam Immersion',
+        title: <>Tech, AI & Career Readiness Program<br />Vietnam Immersion</>,
         stage: 'May 2026',
+      },
+      {
+        title: <>AI and Automations Intern<br />BAI Virtual Services OPC</>,
+        stage: 'Sept 2026 - Present',
       },
     ],
   },
